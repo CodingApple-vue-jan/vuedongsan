@@ -5,16 +5,9 @@
     <p v-bind:style="style"> {{ hello }}</p>
     <!-- <h4 v-for="val in [1,2,3,4,5]" :key="val">{{val}} </h4> -->
     <div v-for="post in posts" :key="post">
-      <h4> {{post.title}} </h4>
-      <p> {{post.date}} </p>
+      <h4> {{ post.title }} </h4>
+      <p> {{ post.date }} </p>
     </div>
-    <h4>title</h4>
-    <p>date</p>
-    <h4>title</h4>
-    <p>date</p>
-    <h4>title</h4>
-    <p>date</p>
-
   </div>
 </template>
 
