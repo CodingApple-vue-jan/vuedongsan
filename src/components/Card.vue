@@ -5,6 +5,7 @@
       <div class="card-body">
         <h5 class="card-title">{{item.title}}</h5>
         <p class="card-text">{{item.caption}}</p>
+        <p class="card-price">{{item.price}}</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
   </div>

@@ -2,6 +2,11 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png"/>
     <div class="container">
+    <button v-on:click="sort_price()" class="btn btn-danger"> sort by price</button>
+    <button v-on:click="sort_name()" class="btn btn-danger"> sort by name</button>
+    <button v-on:click="sort_reset()" class="btn btn-danger"> reset </button>
+    </div>
+    <div class="container">
       <div class="row">
         <Card v-for="item in data" v-bind:item="item" :key=item></Card>
       </div>
@@ -24,6 +29,32 @@ export default {
   components: {
     // HelloWorld
     Card: Card,
+  },
+  methods: {
+    sort_price(){
+      this.data.sort(function(a, b){
+        return a.price - b.price;
+      })
+    },
+    sort_name(){
+      this.data.sort(function(a, b){
+        return (a.title < b.title) ? -1 : (a.title > b.title) ? 1 : 0;
+      });
+    },
+    sort_reset(){
+      this.data.unshift();
+    },
+  },
+  computed: {
+
+  }, watch: {
+
+  },
+  created(){
+
+  },
+  mounted(){
+
   }
 }
 </script>
