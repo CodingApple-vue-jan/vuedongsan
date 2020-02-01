@@ -1,10 +1,10 @@
 <template>
 <div class="col-md-6">
   <div class="card" style="width: 18rem;">
-    <img src="" class="card-img-top" />
+    <img v-bind:src="item.image" class="card-img-top" />
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title">{{item.title}}</h5>
+        <p class="card-text">{{item.caption}}</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
   </div>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-
+  props: {item: Object}
 }
 </script>
 
